@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IE 使用者的電腦可接受的最新版, Chrome 也用最新的-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>front-end-initial-build</title>
+
+    <!-- build:css css/main.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- endbuild -->
+</head>
+<body>
+    <header id="header">
+        <nav class="menu">
+            <div class="container">
+                <div class="menu-title"><a href="#">front end workflow</a></div>
+                <div class="menu-toggle"><img src="./images/menu_button.png" alt="menu_button"></div>
+                <div class="navigation side-slide">
+                    <ul class="main-menu">
+                        <li><a class="active" href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a>Service</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Items-1</a></li>
+                                <li class="dropdown">
+                                    <a>Items-2</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">App</a></li>
+                                        <li><a href="#">Solution</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>FAQ</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Question</a></li>
+                                <li><a href="#"><img class="icon" src="./images/menu_icon.png" alt="icon-menu">Answer</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main">
+        <h1>My workflow initial build.</h1>
+        <img src="images/front-end.jpg" alt="my front-end">
+    </section>
+
+    <footer id="footer">
+        <div class="copyright">All Rights Reserved 2017 © Front End</div>
+    </footer>
+
+    <!-- build:jsDirectlyMove lib/js -->
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/main.min.js -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

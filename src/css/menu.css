@@ -1,0 +1,279 @@
+/**
+ * 導航列 menu
+ * 2017-03-06 製作 RWD 改成側邊欄
+ *
+ * @author Shane Yi <scps950613@gmail.com>
+ * @date 2017-01-19
+ */
+
+.menu {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    position: relative;
+}
+
+/* 可為浮動的導行列 */
+.menu.fixed {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* 訂定基本底層元素 */
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu .icon {
+	height: 15px;
+	margin-right: 10px;
+	width: 15px;
+}
+
+.menu img.icon {
+    margin-bottom: 1px;
+    vertical-align: middle;
+}
+
+.menu .menu-title {
+    float: left;
+    display: block;
+    font-size: 20px;
+    line-height: 55px;
+    color: #000;
+}
+
+.menu .menu-title img {
+    max-height: 45px;
+    vertical-align: middle;
+}
+
+.menu .navigation {
+    float: right;
+    height: auto;
+	width: auto;
+}
+
+
+/* menu > main-menu 第1層(固定在上面的) */
+
+.menu ul.main-menu li {
+    position: relative;
+}
+
+.menu ul.main-menu > li {
+    display: inline-block;
+}
+
+.menu ul.main-menu > li > a {
+    color: #777;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 20px 0;
+    margin: 0 15px;
+}
+
+.menu ul.main-menu > li:hover > a,
+.menu ul.main-menu > li > a.active,
+.menu ul.main-menu > li:hover > a.active {
+    color: #23dbdb;
+}
+
+
+/* menu > main-menu > dropdown (下拉選單，第2層) */
+.menu ul.main-menu li:hover > ul.sub-menu {
+    display: block;
+}
+
+/* level 2 (下拉選單，定訂基本元素) */
+.menu ul.sub-menu {
+    border: 1px solid #e2e2e2;
+    border-radius: 0 0 2px 2px;
+    display: none;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    z-index: 11;
+}
+
+.menu ul.sub-menu > li {
+    border-top: 1px solid #e2e2e2;
+}
+
+.menu ul.sub-menu > li:first-child {
+    border-top: none;
+}
+
+.menu ul.sub-menu > li > a {
+    background-color: #fff;
+    border-left: 3px solid transparent;
+    color: #777;
+    display: block;
+    font-size: 15px;
+    padding: 12px 10px;
+}
+
+/* level 3+ (第3層元素) */
+.menu ul.sub-menu ul.sub-menu {
+    left: 149px;
+    top: 0;
+    z-index: 12;
+}
+
+.menu ul.sub-menu > li > a:hover,
+.menu ul.sub-menu > li.dropdown:hover > a {
+    background-color: #777;
+    border-left: 3px solid #23dbdb;
+    color: #fff;
+}
+
+.menu ul.sub-menu > li.dropdown > a:after {
+    content: ">";
+    float: right;
+    font-size: inherit;
+    line-height: 20px;
+}
+
+.menu .menu-toggle {
+    display: none;
+}
+
+.menu .navigation .main-menu a {
+    cursor: pointer;
+}
+
+
+/* 以下都是RWD版的 meun */
+
+@media (max-width: 767px) {
+
+    .menu .menu-title {
+        float: none;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .menu .menu-toggle {
+        display: block;
+        border-radius: 4px;
+        color: #777;
+        cursor: pointer;
+        font-size: 20px;
+        margin: 0;
+        position: absolute;
+        top: 2.5px;
+        left: 0;
+    }
+
+    .menu .menu-toggle img {
+        height: 50px;
+        width: 55px;
+    }
+
+    .menu .navigation {
+        background-color: #e2e2e2;
+        clear: both;
+        display: none;
+        float: none;
+        margin: 0 -15px;
+        padding: 10px 30px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu .navigation.side-slide {
+        display: block;
+        left: -60%;
+        height: 100%;
+        overflow: auto;
+        position: fixed;
+        width: 60%;
+        transition: transform .35s ease-in-out;
+    }
+
+    .menu .navigation.side-slide.pushed {
+        transform: translate3d(100%,0,0);
+    }
+
+    .menu ul.main-menu > li {
+        border-bottom: 1px solid #c2c2c2;
+        display: block;
+    }
+
+    .menu ul.main-menu > li:last-child {
+        border: none;
+    }
+
+    .menu ul.main-menu > li > a {
+        padding: 12px 6px;
+    }
+
+    .menu ul.main-menu > li.dropdown > a:after {
+        content: "﹀";
+        float: right;
+        font-size: inherit;
+    }
+
+    .menu ul.sub-menu > li.dropdown > a:after {
+        content: "﹀";
+        padding-right: 1px;
+    }
+
+    .menu ul.main-menu > li:hover > a {
+        color: #777;
+    }
+
+    .menu ul.sub-menu {
+        border: none;
+        padding: 0 0 10px 20px;
+        position: static;
+        width: auto;
+    }
+
+    .menu ul.sub-menu > li {
+        border: none;
+        border-bottom: 1px solid #c2c2c2;
+    }
+
+    .menu ul.sub-menu > li:last-child {
+        border-bottom: none;
+    }
+
+    .menu ul.sub-menu > li > a {
+        background-color: transparent;
+        border: none;
+        padding: 12px 6px;
+    }
+
+    .menu ul.sub-menu > li > a:hover,
+    .menu ul.sub-menu > li.dropdown:hover > a {
+        background-color: transparent;
+        border-left: 5px solid transparent;
+        color: #777;
+    }
+
+    .menu ul.sub-menu ul.sub-menu {
+        padding-left: 30px;
+    }
+
+    .menu ul.sub-menu > li.dropdown:last-child ul.sub-menu {
+        padding-bottom: 0;
+    }
+
+    .menu ul.main-menu li:hover > ul.sub-menu {
+        display: none;
+    }
+}

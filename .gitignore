@@ -1,0 +1,4 @@
+# task pulgin & library
+node_modules/
+bower_components/
+src/lib/

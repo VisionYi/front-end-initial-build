@@ -1,0 +1,25 @@
+{
+  "name": "front-end-initial-build",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Shane Yi"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "front-end",
+    "initial-build"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
