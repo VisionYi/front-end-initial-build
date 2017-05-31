@@ -1,4 +1,4 @@
-# front-end-initial-build
+# Front End Initial Build
 
 這是前端開發流程的初期建置，也可以算是個初期樣板。</br>
 在我的 Blog 中有我的學習開發建置的筆記 : [學習前端工作流程 - 初期開發建置](https://visionyi.github.io/2017/05/28/%E5%AD%B8%E7%BF%92%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B-%E5%88%9D%E6%9C%9F%E9%96%8B%E7%99%BC%E5%BB%BA%E7%BD%AE/)
@@ -20,32 +20,32 @@
 開始前需先安裝 Node.js 環境。
 
 下載資源程式碼 & 進入專案 :
-```
+```shell
 $ git clone https://github.com/kdchang/front-end-initial-build
 $ cd front-end-initial-build
 ```
 
 初始化 :
-```
+```shell
 $ npm install && bower install
 ```
 
 開始啟動專案 server 與任務管理器 :
-```
-$ npm start      // 或 npm run start 或 gulp
+```shell
+$ npm start      # 或 npm run start 或 gulp
 ```
 
 建置產生正式目錄檔案(dist) :
-```
-$ npm run build  // 或 gulp build
+```shell
+$ npm run build  # 或 gulp build
 ```
 
 清除正式目錄檔案(dist) :
-```
-$ npm run clean  // 或 gulp clean
+```shell
+$ npm run clean  # 或 gulp clean
 ```
 
-## Other
+### Use With Basic gulpfile.js
 因為本專案用的 gulpfile.js 的程式碼為較進階版的，也有參入自訂義元素，所以這裡也放上基本版的。功能與上面的使用方式相同，只有啟動 server 後的根目錄改為 dist 正式目錄。
 
 基本版的 gulpfile.js 之程式碼 :
