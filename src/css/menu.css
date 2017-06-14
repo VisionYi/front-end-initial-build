@@ -81,7 +81,7 @@
     color: #777;
     display: block;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 16px;
     padding: 20px 0;
     margin: 0 15px;
@@ -218,6 +218,7 @@
     }
 
     .menu ul.main-menu > li > a {
+        margin: 0;
         padding: 12px 6px;
     }
 
@@ -225,6 +226,7 @@
         content: "﹀";
         float: right;
         font-size: inherit;
+        font-weight: bold;
     }
 
     .menu ul.sub-menu > li.dropdown > a:after {
