@@ -1,6 +1,7 @@
 # Front End Initial Build
 
-這是前端開發流程的初期建置，也可以算是個初期樣板。</br>
+這是前端開發流程的初期建置，也可以算是個初期樣板，包含了 Gulp 的使用開發。
+</br>
 在我的 Blog 中有我的學習開發建置的筆記 : [學習前端工作流程 - 初期開發建置](https://visionyi.github.io/2017/05/28/%E5%AD%B8%E7%BF%92%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B-%E5%88%9D%E6%9C%9F%E9%96%8B%E7%99%BC%E5%BB%BA%E7%BD%AE/)
 
 ## Content
@@ -45,7 +46,7 @@ $ npm run build  # 或 gulp build
 $ npm run clean  # 或 gulp clean
 ```
 
-### Use With Basic gulpfile.js
+### Use with basic gulpfile.js
 因為本專案用的 gulpfile.js 的程式碼為較進階版的，也有參入自訂義元素，所以這裡也放上基本版的。功能與上面的使用方式相同，只有啟動 server 後的根目錄改為 dist 正式目錄。
 
 基本版的 gulpfile.js 之程式碼 :
